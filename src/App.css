@@ -1,0 +1,79 @@
+.tasks-app {
+  margin: 30px auto;
+  border: 2px solid #000;
+  border-radius: 20px;
+  padding: 20px 10px;
+  background-color: #44f113;
+  width: 90%;
+}
+
+h1 {
+  text-decoration: underline;
+}
+
+ol.tasks-list {
+  padding: 0;
+  list-style-type: none;
+}
+
+ol li {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  color: #e6cb69;
+}
+
+ol li:nth-child(odd) {
+  background-color: green;
+}
+
+ol li:nth-child(even) {
+  background-color: darkgreen;
+}
+
+ol li.completed {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+ol li.completed:after {
+  content: '';
+  position: absolute;
+  width: 70%;
+  height: 30%;
+  top: 50%;
+  left: 50px;
+  border-top: 2px solid #000;
+}
+
+ol li input {
+  margin-right: 20px;
+}
+
+ol li button {
+  cursor: pointer;
+  margin-left: auto;
+}
+
+form {
+  display: flex;
+}
+
+form #newTaskInput {
+  flex-grow: 1;
+  border: none;
+  padding: 10px;
+}
+
+@media screen and (min-width: 600px){
+  .tasks-app {
+    width: 500px;
+    margin: 50px auto;
+    padding: 25px 20px;
+  }
+
+  ol li.completed:after {
+    width: 75%;
+  }
+}
